@@ -76,5 +76,3 @@ func main() {
 
 	bracketCount(formula)
 }
-
-//аеёиоуыэюя
