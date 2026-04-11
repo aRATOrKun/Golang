@@ -27,20 +27,14 @@ func vowelLetters(str string) int {
 
 func capitalizeWords(s string) string {
 	strRune := []rune(s)
-	cnt := 0
+	strRune[0] = unicode.ToUpper(strRune[0])
 
-	for j := range utf8.RuneCountInString(s) {
-		cnt += 1
-		if strRune[j] == ' ' || j == utf8.RuneCountInString(s)-1 {
-			for i := j + 1 - cnt; i < utf8.RuneCountInString(s); i++ {
-				if i == j+1-cnt {
-					strRune[i] = unicode.ToUpper(strRune[i])
-				} else {
-					strRune[i] = unicode.ToLower(strRune[i])
-				}
-			}
-
-			cnt = 0
+	for i := 1; i < utf8.RuneCountInString(s); i++ {
+		if strRune[i] == ' ' {
+			i++
+			strRune[i] = unicode.ToUpper(strRune[i])
+		} else {
+			strRune[i] = unicode.ToLower(strRune[i])
 		}
 	}
 
