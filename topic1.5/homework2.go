@@ -57,13 +57,13 @@ func main() {
 	sentence, _ := reader.ReadString('\n')
 	sentence = strings.TrimSpace(sentence)
 
-	fmt.Println("Количество символов в строке:", utf8.RuneCountInString(sentence))
-	fmt.Println("Количество гласных в строке:", vowelLetters(sentence))
-	fmt.Println("Первая буква в слове - заглавная:", capitalizeWords(sentence))
+	fmt.Println("Количество символов в строке:", utf8.RuneCountInString(sentence)) // Задача №1
+	fmt.Println("Количество гласных в строке:", vowelLetters(sentence))            // Задача №2
+	fmt.Println("Первая буква в слове - заглавная:", capitalizeWords(sentence))    // Задача №3
 
 	reader2 := bufio.NewReader(os.Stdin)
 
-	fmt.Println("Введите формулу со скобками:")
+	fmt.Println("Введите формулу со скобками:") // Задача №4
 
 	formula, _ := reader2.ReadString('\n')
 	formula = strings.TrimSpace(formula)
