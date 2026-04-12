@@ -33,7 +33,7 @@ func main() {
 		sum += numbers[i]
 	}
 
-	bubbleSort(numbers[0:5])
+	bubbleSort(numbers[:5])
 
 	fmt.Printf("Отсортированные элементы: %d\n", numbers)
 	fmt.Printf("Самое большое число: %d\n", numbers[0])
