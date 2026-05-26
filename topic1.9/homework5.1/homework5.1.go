@@ -13,7 +13,7 @@ func (b Book) GetInfo() {
 }
 
 func main() {
-	var book Book = Book{"Преступление и наказание", "Достоевский Ф.М.", 1866}
+	var book = Book{"Преступление и наказание", "Достоевский Ф.М.", 1866}
 
 	book.GetInfo()
 }
